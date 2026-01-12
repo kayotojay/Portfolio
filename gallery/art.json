@@ -249,9 +249,45 @@
     ]
   },
   {
+    "file": "Fs2.png",
+    "date": "2024-08-07",
+    "title": "Fs2",
+    "tags": [
+      "2024",
+      "practice"
+    ]
+  },
+  {
+    "file": "Fs3.png",
+    "date": "2024-08-07",
+    "title": "Fs3",
+    "tags": [
+      "2024",
+      "practice"
+    ]
+  },
+  {
+    "file": "Fs4.png",
+    "date": "2024-08-08",
+    "title": "Fs4",
+    "tags": [
+      "2024",
+      "practice"
+    ]
+  },
+  {
     "file": "ts1.png",
     "date": "2024-08-10",
     "title": "Sketch1",
+    "tags": [
+      "2024",
+      "practice"
+    ]
+  },
+  {
+    "file": "Fs5.png",
+    "date": "2024-08-10",
+    "title": "Fs5",
     "tags": [
       "2024",
       "practice"
@@ -679,38 +715,6 @@
       "completed",
       "2026",
       "practice"
-    ]
-  },
-  {
-    "file": "Fs2.png",
-    "date": "2024-08-07",
-    "title": "Fs2",
-    "tags": [
-      "2024","practice"
-    ]
-  },
-  {
-    "file": "Fs3.png",
-    "date": "2024-08-07",
-    "title": "Fs3",
-    "tags": [
-      "2024","practice"
-    ]
-  },
-  {
-    "file": "Fs4.png",
-    "date": "2024-08-08",
-    "title": "Fs4",
-    "tags": [
-      "2024","practice"
-    ]
-  },
-  {
-    "file": "Fs5.png",
-    "date": "2024-08-10",
-    "title": "Fs5",
-    "tags": [
-      "2024","practice"
     ]
   }
 ]
