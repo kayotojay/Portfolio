@@ -1,0 +1,311 @@
+:root {
+  --bg: #0b0b0d;
+  --panel: #15151a00;
+  --border: #26262c;
+  --text: #eaeaea;
+  --muted: #8b8b8b;
+  --accent: #ffffff;
+}
+
+/* ===== BODY ===== */
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.header h1 {
+  font-size: 1.2rem;
+}
+
+.header nav .nav-btn {
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.header nav .nav-btn:hover {
+  background: #1c1c22;
+}
+
+/* ===== FILTERS ===== */
+.gallery-filters {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem 3rem;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #333;
+  border-radius: 6px;
+  background: #1c1c22;
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.25s ease;
+}
+
+.filter-btn:hover {
+  background: #26262e;
+}
+
+/* ===== GALLERY GRID ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  padding: 2rem 3rem;
+}
+
+/* ===== ART CARD ===== */
+.art-card {
+  background: var(--panel);
+  border: 2px solid rgba(255, 255, 255, 0);
+  border-radius: 10px;
+  padding: 0.75rem;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.35s ease;
+}
+
+.art-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.171);
+}
+
+/* Info container */
+.art-card .info {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+/* Date styling */
+.art-date {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Title / hashtags styling */
+.art-title {
+  font-size: 0.9rem;
+  color: var(--accent);
+  text-align: center;
+  word-break: break-word;
+}
+
+
+/* ===== ART MEDIA + RIPPLE ===== */
+.art-media {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+
+  /* Glass effect */
+  border: 2px solid rgba(0, 0, 0, 0);
+  background: rgba(255, 255, 255, 0.719);
+  backdrop-filter: blur(10px);
+}
+
+.art-thumb {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Ripple element */
+.ripple {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(
+    circle,
+    rgba(255,255,255,0.45),
+    rgba(255,255,255,0.25) 35%,
+    transparent 65%
+  );
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.art-media.active .ripple {
+  transform: scale(18);
+  opacity: 1;
+  /* border-glass reflection */
+  border-color: rgba(255,255,255,0.35);
+  box-shadow:
+    inset 0 0 18px rgba(255,255,255,0.25),
+    inset 0 0 36px rgba(255,255,255,0.15);
+}
+/* ===== ART MODAL / LIGHTBOX ===== */
+.art-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(11, 11, 13, 0.95);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.35s ease;
+  z-index: 1000;
+  padding: 1rem; /* add padding so date is visible on small screens */
+}
+
+.art-modal.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.art-modal .modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 100%; /* prevent overflow */
+  overflow: hidden;
+}
+
+.art-modal .modal-img {
+  max-width: 90%;
+  max-height: 75vh; /* <<< limit height so date shows */
+  border-radius: 10px;
+  transform: scale(0.8);
+  transition: transform 0.35s ease;
+  object-fit: contain; /* maintain aspect ratio */
+}
+
+.art-modal .modal-date {
+  margin-top: 0.75rem;
+  color: #aaa;
+  font-size: 0.95rem;
+  font-weight: 400;
+  text-align: center;
+  flex-shrink: 0; /* never shrink */
+}
+
+.art-modal.show .modal-img {
+  transform: scale(1);
+  transition: transform 0.35s ease;
+}
+
+/* ===== SEARCH BAR ===== */
+.gallery-search {
+  padding: 1rem 3rem;
+}
+
+#searchInput {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.03);
+  color: var(--text);
+  font-size: 0.95rem;
+  outline: none;
+  transition: background 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+#searchInput::placeholder {
+  color: var(--muted);
+}
+
+#searchInput:focus {
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 0 12px rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.28);
+}
+
+#loadingBarContainer {
+  width: 100%;
+  height: 4px;
+  background: #222;
+  margin-bottom: 1rem;
+}
+
+#loadingBar {
+  width: 0%;
+  height: 100%;
+  background: #fff;
+  transition: width 0.2s ease;
+}
+
+.art-thumb {
+  opacity: 0;
+  filter: blur(8px);
+  transition: opacity 0.6s ease, filter 0.6s ease;
+}
+
+.art-thumb.fade-in {
+  opacity: 1;
+  filter: blur(0);
+}
+
+.art-title {
+    font-weight: 700;
+    margin-top: 4px;
+    line-height: 1.2;
+}
+
+.art-tags {
+    margin-top: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.art-tag {
+    font-size: 0.75rem;
+    color: #9a9a9a;
+    cursor: pointer;
+    user-select: none;
+}
+
+.art-tag:hover {
+    color: #555;
+    text-decoration: underline;
+}
+
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.6);
+  font-size: 0.9rem;
+  background: var(--bg);
+}
+
+/* Portfolio & Copyright Banner */
+.copyright-banner {
+  width: 100%;
+  background-color: #222;   /* dark background for visibility */
+  color: #ccc;              /* light gray text */
+  text-align: center;       /* center text */
+  font-size: 0.8rem;
+  line-height: 1.5;
+  padding: 12px 16px;
+  box-sizing: border-box;
+  position: relative;       /* keep it inside footer */
+  margin-top: 16px;
+  border-top: 1px solid #444;
+}
+

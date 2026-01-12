@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jay | Books</title>
+  <link rel="stylesheet" href="books.css">
+  <script src="https://unpkg.com/mammoth/mammoth.browser.min.js"></script>
+
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header">
+    <h1>Jay</h1>
+    <nav>
+      <button class="nav-btn" onclick="location.href='../index.html'">Home</button>
+      <button class="nav-btn" onclick="location.href='../gallery/gallery.html'">Art</button>
+    </nav>
+  </header>
+      <!-- ===== FILTERS ===== -->
+  <section class="gallery-filters">
+    <button class="filter-btn" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="newest">Newest</button>
+    <button class="filter-btn" data-filter="oldest">Oldest</button>
+  </section>
+<!-- ===== SEARCH BAR ===== -->
+    <section class="gallery-search">
+    <input type="text" id="searchInput" placeholder="Search by tags or name..." />
+    </section>
+
+  <!-- ===== BOOK ===== -->
+  <div class="book">
+  <div class="spread">
+
+    <!-- LEFT STATIC PAGE -->
+    <div class="page left" id="leftPage"></div>
+
+    <!-- FLIPPING SHEET -->
+    <div class="sheet" id="sheet">
+      <div class="page front" id="rightPage"></div>
+      <div class="page back" id="nextLeftPage"></div>
+    </div>
+
+    <!-- RIGHT STATIC PAGE SHADOW -->
+    <div class="page right-shadow"></div>
+
+  </div>
+</div>
+
+
+  <!-- ===== BOOK INDEX ===== -->
+  <section class="book-index">
+    <div id="booksList"></div>
+  </section>
+
+  <!-- ===== BOOK READER MODAL ===== -->
+  <div id="bookModal" class="book-modal">
+    <div class="book-content">
+      <div class="book-page" id="bookPage"></div>
+      <div class="book-nav">
+        <button id="prevPage"><</button>
+        <button id="nextPage">></button>
+      </div>
+      <div class="book-tags" id="bookTagsDisplay"></div>
+      <button id="closeBook">X</button>
+    </div>
+  </div>
+
+      <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <p>© 2025 Jay</p>
+
+  <!-- ===== PORTFOLIO & COPYRIGHT BANNER ===== -->
+  <div class="copyright-banner">
+    <p>This portfolio showcases my original artwork, stories, documents, and other content. All content is protected under copyright law. You may reference, share, or discuss my work in articles, blogs, or educational settings <strong>with proper credit</strong> and a link back to this site. Unauthorized commercial use, redistribution, or modification is not permitted without my consent.</p>
+  </div>
+
+
+  <script src="books.js"></script>
+
+
+</body>
+</html>

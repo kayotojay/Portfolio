@@ -1,0 +1,16 @@
+[
+  {
+    "file": "placeholder.docx",
+    "title": "Placeholder",
+    "tags": "#draft #incomplete",
+    "dateStarted": "2024-01-05"
+  },
+  {
+    "file": "RedChair_Novel.docx",
+    "title": "RedChair",
+    "tags": "#incomplete #lightnovel ",
+    "cover": "HalfInvis1.jpg",
+    "dateStarted": "2026-01-05",
+    "dateCompleted": ""
+  }
+]
