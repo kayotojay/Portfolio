@@ -204,6 +204,24 @@
     ]
   },
   {
+    "file": "Golf Girl.png",
+    "date": "2024-07-20",
+    "title": "Golf Girl",
+    "tags": [
+      "2024",
+      "completed"
+    ]
+  },
+  {
+    "file": "FSCE SWETCH.png",
+    "date": "2024-07-25",
+    "title": "FSCE SWETCH",
+    "tags": [
+      "2024",
+      "practice"
+    ]
+  },
+  {
     "file": "Some ugly ahh male practice.png",
     "date": "2024-07-31",
     "title": "Some ugly ahh male practice",
@@ -219,6 +237,15 @@
     "tags": [
       "2024",
       "unfinished"
+    ]
+  },
+  {
+    "file": "P6 jul 13, 2024.png",
+    "date": "2024-08-01",
+    "title": "P6 jul 13, 2024",
+    "tags": [
+      "2024",
+      "practice"
     ]
   },
   {
@@ -258,6 +285,26 @@
     ]
   },
   {
+    "file": "Muscle 2.png",
+    "date": "2024-08-13",
+    "title": "Muscle 2",
+    "tags": [
+      "2024",
+      "practice",
+      "anatomy"
+    ]
+  },
+  {
+    "file": "Muscle 1.png",
+    "date": "2024-08-13",
+    "title": "Muscle 1",
+    "tags": [
+      "2024",
+      "practice",
+      "anatomy"
+    ]
+  },
+  {
     "file": "Spartan sketch practice.png",
     "date": "2024-08-14",
     "title": "Spartan sketch practice",
@@ -278,12 +325,49 @@
     ]
   },
   {
+    "file": "Muscle 3.png",
+    "date": "2024-08-14",
+    "title": "Muscle 3",
+    "tags": [
+      "2024",
+      "practice",
+      "anatomy"
+    ]
+  },
+  {
+    "file": "gD.png",
+    "date": "2024-08-15",
+    "title": "gD",
+    "tags": [
+      "2024",
+      "practice"
+    ]
+  },
+  {
     "file": "Sketch4.png",
     "date": "2024-08-19",
     "title": "Sketch4",
     "tags": [
       "2024",
       "sketch"
+    ]
+  },
+  {
+    "file": "Fs6.png",
+    "date": "2024-08-19",
+    "title": "Fs6",
+    "tags": [
+      "2024",
+      "practice"
+    ]
+  },
+  {
+    "file": "fs8.png",
+    "date": "2024-08-21",
+    "title": "fs8",
+    "tags": [
+      "2024",
+      "practice"
     ]
   },
   {
@@ -313,6 +397,15 @@
       "2024",
       "completed",
       "painting"
+    ]
+  },
+  {
+    "file": "P1.png",
+    "date": "2024-10-22",
+    "title": "P1",
+    "tags": [
+      "2024",
+      "practice"
     ]
   },
   {
@@ -378,6 +471,15 @@
       "2025",
       "sketch",
       "practice"
+    ]
+  },
+  {
+    "file": "JJk practice.png",
+    "date": "2025-03-08",
+    "title": "JJk practice",
+    "tags": [
+      "2025",
+      "referenced"
     ]
   },
   {
@@ -580,91 +682,35 @@
     ]
   },
   {
-    "file": "Golf Girl.png",
-    "date": "2024-07-20",
-    "title": "Golf Girl",
-    "tags": [
-      "2024","completed"
-    ]
-  },
-  {
-    "file": "FSCE SWETCH.png",
-    "date": "2024-07-25",
-    "title": "FSCE SWETCH",
+    "file": "Fs2.png",
+    "date": "2024-08-07",
+    "title": "Fs2",
     "tags": [
       "2024"
     ]
   },
   {
-    "file": "P6 jul 13, 2024.png",
-    "date": "2024-08-01",
-    "title": "P6 jul 13, 2024",
+    "file": "Fs3.png",
+    "date": "2024-08-07",
+    "title": "Fs3",
     "tags": [
       "2024"
     ]
   },
   {
-    "file": "Muscle 2.png",
-    "date": "2024-08-13",
-    "title": "Muscle 2",
+    "file": "Fs4.png",
+    "date": "2024-08-08",
+    "title": "Fs4",
     "tags": [
       "2024"
     ]
   },
   {
-    "file": "Muscle 1.png",
-    "date": "2024-08-13",
-    "title": "Muscle 1",
+    "file": "Fs5.png",
+    "date": "2024-08-10",
+    "title": "Fs5",
     "tags": [
       "2024"
-    ]
-  },
-  {
-    "file": "Muscle 3.png",
-    "date": "2024-08-14",
-    "title": "Muscle 3",
-    "tags": [
-      "2024"
-    ]
-  },
-  {
-    "file": "gD.png",
-    "date": "2024-08-15",
-    "title": "gD",
-    "tags": [
-      "2024"
-    ]
-  },
-  {
-    "file": "Fs6.png",
-    "date": "2024-08-19",
-    "title": "Fs6",
-    "tags": [
-      "2024"
-    ]
-  },
-  {
-    "file": "fs8.png",
-    "date": "2024-08-21",
-    "title": "fs8",
-    "tags": [
-      "2024"
-    ]
-  },
-  {
-    "file": "P1.png",
-    "date": "2024-10-22",
-    "title": "P1",
-    "tags": [
-      "2024"
-    ]
-  },
-  {
-    "file": "JJk practice.png",
-    "date": "2025-03-08",
-    "title": "JJk practice",
-    "tags": [
-      "2025"
     ]
   }
 ]
