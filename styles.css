@@ -30,10 +30,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: system-ui, sans-serif;
+  font-family: "Nova Square", sans-serif;
 }
 
 /* ========== HEADER ========== */
@@ -208,6 +213,7 @@ body {
   border-radius: 6px;
   cursor: pointer;
   transition: background 0.25s ease, transform 0.2s ease;
+  font-family: "Nova Square", sans-serif;
 }
 
 .view-btn:hover {
@@ -309,6 +315,86 @@ footer {
 
 #copyrightDetails h2,
 #copyrightDetails h3 {
-  color: var(--text-strong);
-  margin-top: 12px;
+  all: unset;                 /* nuke browser defaults */
+  display: block;
+  margin: 10px 0 4px;
+  font-size: 0.85rem;         /* SAME size for all titles */
+  font-weight: 500;
+  color: var(--muted);        /* muted, not shouting */
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+/* ===== MORPHING ABSTRACT BACKGROUND ===== */
+.bg-shapes {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  background: radial-gradient(
+    circle at top,
+    #111118,
+    #0b0b0d 70%
+  );
+}
+
+.bg-shapes span {
+  position: absolute;
+  width: 40vmax;
+  height: 40vmax;
+  background: radial-gradient(
+    circle,
+    rgba(25, 15, 39, 0.473),
+    transparent 70%
+  );
+  filter: blur(80px);
+  animation: float 40s linear infinite,
+             morph 5s ease-in-out infinite;
+  opacity: 0.6;
+}
+
+/* Different positions & timings */
+.bg-shapes span:nth-child(1) {
+  top: -10%;
+  left: -10%;
+  animation-duration: 50s, 22s;
+}
+.bg-shapes span:nth-child(2) {
+  top: 20%;
+  right: -15%;
+  animation-duration: 60s, 26s;
+}
+.bg-shapes span:nth-child(3) {
+  bottom: -20%;
+  left: 10%;
+  animation-duration: 55s, 20s;
+}
+.bg-shapes span:nth-child(4) {
+  bottom: 10%;
+  right: 15%;
+  animation-duration: 65s, 28s;
+}
+.bg-shapes span:nth-child(5) {
+  top: 40%;
+  left: 40%;
+  animation-duration: 70s, 30s;
+}
+
+/* Slow drifting motion */
+@keyframes float {
+  0%   { transform: translate(0, 0); }
+  50%  { transform: translate(6vw, -8vh); }
+  100% { transform: translate(0, 0); }
+}
+
+/* Shape morphing */
+@keyframes morph {
+  0% {
+    border-radius: 42% 58% 65% 35% / 45% 45% 55% 55%;
+  }
+  50% {
+    border-radius: 60% 40% 30% 70% / 55% 65% 35% 45%;
+  }
+  100% {
+    border-radius: 42% 58% 65% 35% / 45% 45% 55% 55%;
+  }
 }
