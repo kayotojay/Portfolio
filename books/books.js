@@ -66,9 +66,9 @@ function renderBooks() {
     if (b.dateCompleted) {
       dateInfo += ` | Completed: ${b.dateCompleted}`;
     }
-    
 
-  div.innerHTML = `
+
+    div.innerHTML = `
     <img src="${booksFolder + coverSrc}" alt="${b.title} Cover">
     <div class="book-title">${b.title}</div>
     <div class="book-tags">${b.tags}</div>
@@ -77,7 +77,7 @@ function renderBooks() {
     </div>
     <button class="download-btn" style="
       margin-top:5px;
-      background-color:#222;
+      background-color:#242450;
       color:#fff;
       border:none;
       padding:6px 12px;
@@ -87,11 +87,11 @@ function renderBooks() {
     ">Download</button>
   `;
 
-    div.querySelector(".download-btn").onmouseover = function() {
-      this.style.backgroundColor = "#555";
+    div.querySelector(".download-btn").onmouseover = function () {
+      this.style.backgroundColor = "#151529";
     };
-    div.querySelector(".download-btn").onmouseout = function() {
-      this.style.backgroundColor = "#222";
+    div.querySelector(".download-btn").onmouseout = function () {
+      this.style.backgroundColor = "#242450";
     };
 
 
@@ -119,28 +119,28 @@ function downloadBook(file, filename) {
 
 // === Paginate by Word page breaks ===
 function paginateByPageBreaks(html) {
-    const temp = document.createElement("div");
-    temp.innerHTML = html;
-    const pages = [];
-    let currentPageHTML = "";
+  const temp = document.createElement("div");
+  temp.innerHTML = html;
+  const pages = [];
+  let currentPageHTML = "";
 
-    temp.childNodes.forEach(node => {
-        const nodeHTML = node.outerHTML || node.textContent || "";
-        if (node.classList && node.classList.contains("page-break")) {
-            if (currentPageHTML.trim()) pages.push(currentPageHTML);
-            currentPageHTML = "";
-        } else {
-            currentPageHTML += nodeHTML;
-            // fallback: if page gets too big, force split
-            if (currentPageHTML.length > 2000) {
-                pages.push(currentPageHTML);
-                currentPageHTML = "";
-            }
-        }
-    });
+  temp.childNodes.forEach(node => {
+    const nodeHTML = node.outerHTML || node.textContent || "";
+    if (node.classList && node.classList.contains("page-break")) {
+      if (currentPageHTML.trim()) pages.push(currentPageHTML);
+      currentPageHTML = "";
+    } else {
+      currentPageHTML += nodeHTML;
+      // fallback: if page gets too big, force split
+      if (currentPageHTML.length > 2000) {
+        pages.push(currentPageHTML);
+        currentPageHTML = "";
+      }
+    }
+  });
 
-    if (currentPageHTML.trim()) pages.push(currentPageHTML);
-    return pages;
+  if (currentPageHTML.trim()) pages.push(currentPageHTML);
+  return pages;
 }
 
 
@@ -173,7 +173,7 @@ async function openBook(index) {
     const buffer = await res.arrayBuffer();
 
     // Convert DOCX to HTML and preserve page breaks
-    const result = await mammoth.convertToHtml({ 
+    const result = await mammoth.convertToHtml({
       arrayBuffer: buffer,
       styleMap: ["page-break => .page-break"]
     });

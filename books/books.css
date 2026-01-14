@@ -1,40 +1,77 @@
 :root {
-  --bg: #0b0b0d;
-  --panel: #15151a;
-  --border: #26262c;
-  --text: #eaeaea;
-  --muted: #8b8b8b;
+  --bg: #0a0f1a;
+  --panel: #12182a;
+  --panel-strong: #0e1424;
+  --button-bg: #151529;
+  --border: #1f2a44;
+  --text: #e6ebff;
+  --text-strong: #ffffff;
+  --muted: #8a94b8;
+  --accent: #5c7cff;
+  --accent-soft: rgba(92, 124, 255, 0.15);
+  --icon: var(--text);
+  --icon-muted: var(--muted);
+  --ripple: rgba(255, 255, 255, 0.45);
+  --button-bg: #151529;
+  --button-hover: rgb(36, 36, 80);
 }
 
-/* ===== BODY + HEADER ===== */
+/* ===== BODY===== */
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
 }
-
+/* ========== HEADER ========== */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 14px 8%;
+  background: var(--panel-strong);
   border-bottom: 1px solid var(--border);
 }
 
-.nav-btn {
-  padding: 0.4rem 1rem;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  background: transparent;
-  color: var(--text);
-  cursor: pointer;
-  margin-left: 0.5rem;
+.brand {
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+  color: var(--text-strong);
 }
 
-.nav-btn:hover {
-  background: #1c1c22;
+.top-nav {
+  display: flex;
+  gap: 28px;
 }
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+
+  color: var(--muted);
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+}
+
+.nav-item img {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 4px;
+
+  filter: brightness(0) saturate(100%);
+  opacity: 0.75;
+}
+
+.nav-item:hover {
+  color: var(--text);
+}
+
+.nav-item:hover img {
+  opacity: 1;
+}
+
 
 /* ===== BOOK INDEX SHELF ===== */
 .book-index {
@@ -58,28 +95,23 @@ body {
   border-radius: 10px;
   background: var(--panel);
   cursor: pointer;
-  width: 150px; /* fixed width for shelf item */
+  width: 150px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .book-item img {
   width: 100%;
   height: auto;
-  max-height: 200px; /* prevent tall images from overflowing */
-  object-fit: cover; /* crop nicely if needed */
+  max-height: 200px;
+  object-fit: cover;
   border-radius: 6px;
+  transition: transform 0.3s ease;
 }
-
-.book-title {
-  font-weight: bold;
-  text-align: center;
-}
-
-.book-tags {
-  font-size: 0.8rem;
-  color: var(--muted);
-  text-align: center;
-}
-
 
 .book-item .book-cover {
   width: 100%;
@@ -96,7 +128,7 @@ body {
   box-shadow: 0 15px 40px rgba(0,0,0,0.8);
 }
 
-/* Title + tags under book */
+/* ===== BOOK INFO ===== */
 .book-item .book-info {
   margin-top: 0.5rem;
   text-align: center;
@@ -105,6 +137,7 @@ body {
 .book-item .book-title {
   font-weight: bold;
   font-size: 0.9rem;
+  color: var(--text-strong);
 }
 
 .book-item .book-tags {
@@ -112,7 +145,7 @@ body {
   color: var(--muted);
 }
 
-/* ===== FULLSCREEN READER ===== */
+
 /* ===== FULLSCREEN READER ===== */
 .book-modal {
   position: fixed;
@@ -120,8 +153,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #111; /* dark background */
-  color: #fff;
+  background: var(--panel-strong); /* dark background from theme */
+  color: var(--text);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
@@ -141,11 +174,11 @@ body {
   height: 80%;
   overflow-y: auto;
   padding: 3rem 2rem;
-  background: #111;
+  background: var(--panel);
   font-family: "Miriam Fixed", monospace;
   font-size: 1.1rem;
   line-height: 1.7;
-  color: #fff;
+  color: var(--text);
   border-radius: 8px;
   position: relative;
   box-shadow: 0 0 60px rgba(0,0,0,0.7);
@@ -164,11 +197,17 @@ body {
   left: 20px;
   background: transparent;
   border: none;
-  color: #fff;
+  color: var(--accent);
   font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
   z-index: 1010;
+  transition: color 0.25s ease, background 0.25s ease;
+}
+
+#closeBook:hover {
+  background: var(--button-hover);
+  border-radius: 4px;
 }
 
 /* Previous/Next arrows - fixed left/right */
@@ -176,8 +215,8 @@ body {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0,0,0,0.6);
-  color: #fff;
+  background: var(--button-bg);
+  color: var(--accent);
   border: none;
   font-size: 2.5rem;
   width: 60px;
@@ -185,6 +224,7 @@ body {
   cursor: pointer;
   border-radius: 50%;
   z-index: 1010;
+  transition: background 0.25s ease, color 0.25s ease;
 }
 
 #prevPage {
@@ -195,8 +235,8 @@ body {
   right: 20px;
 }
 
-#prevPage:hover, #nextPage:hover, #closeBook:hover {
-  background: rgba(255,255,255,0.1);
+#prevPage:hover, #nextPage:hover {
+  background: var(--button-hover);
 }
 
 /* ===== FILTERS ===== */
@@ -208,16 +248,16 @@ body {
 
 .filter-btn {
   padding: 0.5rem 1rem;
-  border: 1px solid #333;
+  border: 1px solid var(--border);
   border-radius: 6px;
-  background: #1c1c22;
+  background: var(--button-bg);
   color: var(--text);
   cursor: pointer;
   transition: background 0.25s ease;
 }
 
 .filter-btn:hover {
-  background: #26262e;
+  background: var(--button-hover);
 }
 
 /* ===== SEARCH BAR ===== */
@@ -248,11 +288,12 @@ body {
   border: 1px solid rgba(255,255,255,0.28);
 }
 
+/* ===== FOOTER ===== */
 .footer {
   text-align: center;
   padding: 1.5rem;
   border-top: 1px solid rgba(255,255,255,0.1);
-  color: rgba(255,255,255,0.6);
+  color: var(--muted);
   font-size: 0.9rem;
   background: var(--bg);
 }
@@ -260,14 +301,16 @@ body {
 /* Portfolio & Copyright Banner */
 .copyright-banner {
   width: 100%;
-  background-color: #222;   /* dark background for visibility */
-  color: #ccc;              /* light gray text */
-  text-align: center;       /* center text */
+  background-color: var(--panel-strong);
+  color: var(--muted);
+  text-align: center;
   font-size: 0.8rem;
   line-height: 1.5;
   padding: 12px 16px;
   box-sizing: border-box;
-  position: relative;       /* keep it inside footer */
+  position: relative;
   margin-top: 16px;
-  border-top: 1px solid #444;
+  border-top: 1px solid var(--border);
+  cursor: pointer;
+  user-select: none;
 }
