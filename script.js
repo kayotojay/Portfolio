@@ -1,6 +1,6 @@
 // === LIST YOUR ART FILES HERE ===
 const artFolder = "art/";
-const artFiles = [,
+const artFiles = [
   "Cas.png",
   "Halfinvis1.png",
   "Cube.png",,

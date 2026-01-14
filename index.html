@@ -10,15 +10,27 @@
 
 <body>
 
-  <!-- ========== HEADER ========== -->
-  <header class="header">
-    <h1>Jay</h1>
-    <nav>
-      <button class="nav-btn" onclick="location.href='gallery/gallery.html'">Art</button>
-      <button class="nav-btn" onclick="location.href='books/books.html'">Novels</button>
-      <button class="nav-btn">Contact</button>
-    </nav>
-  </header>
+<!-- ========== HEADER ========== -->
+<header class="header">
+  <div class="brand">Jay</div>
+
+  <nav class="top-nav">
+    <a href="gallery/gallery.html" class="nav-item">
+      <img src="icons/art.svg" alt="Art">
+      <span>Art</span>
+    </a>
+
+    <a href="books/books.html" class="nav-item">
+      <img src="icons/book.svg" alt="Novels">
+      <span>Novels</span>
+    </a>
+
+    <a href="#contact" class="nav-item">
+      <img src="icons/contact.svg" alt="Contact">
+      <span>Contact</span>
+    </a>
+  </nav>
+</header>
 
   <!-- ========== HERO ========== -->
   <section class="hero">
@@ -55,6 +67,63 @@
 
   </section>
 
+  <!-- ========== ABOUT ========== -->
+  <section class="about">
+    <h2>ABOUT</h2>
+
+    <div class="about-grid">
+      <div class="about-block">
+        <h3>Overview</h3>
+        <p>
+          Visual artist and writer working across digital illustration,
+          character design, and narrative projects. Focused on building
+          cohesive worlds and polished standalone pieces.
+        </p>
+      </div>
+
+      <div class="about-block">
+        <h3>What I Work On</h3>
+        <ul>
+          <li>Illustration & visual studies</li>
+          <li>Character and concept development</li>
+          <li>Long-form fiction & worldbuilding</li>
+          <li>Personal creative systems & tooling</li>
+        </ul>
+      </div>
+
+      <div class="about-block">
+        <h3>Tools & Software</h3>
+        <ul class="pill-list">
+          <li>Blender</li>
+          <li>Adobe Photoshop</li>
+          <li>Adobe Dreamweaver</li>
+          <li>VS Code</li>
+          <li>Godot</li>
+        </ul>
+      </div>
+
+      <div class="about-block">
+        <h3>Technologies</h3>
+        <ul class="pill-list">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>Game Scripting</li>
+        </ul>
+      </div>
+
+
+      <div class="about-block">
+        <h3>How I Work</h3>
+        <p>
+          Iterative process. Rough exploration first, refinement later.
+          Emphasis on consistency, structure, and long-term improvement
+          rather than one-off pieces.
+        </p>
+      </div>
+    </div>
+  </section>
 
 
   <!-- ===== PORTFOLIO & COPYRIGHT BANNER ===== -->
