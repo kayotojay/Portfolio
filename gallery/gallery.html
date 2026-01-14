@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,55 +16,66 @@
     <div class="modal-date"></div>
   </div>
 </div>
+
 <body>
-<!-- ========== HEADER ========== -->
-<header class="header">
-  <div class="brand">Jay</div>
+  <!-- ========== HEADER ========== -->
+  <header class="header">
+    <div class="brand">Jay</div>
 
-  <nav class="top-nav">
-    <a href="../books/books.html" class="nav-item">
-      <img src="icons/book.svg" alt="Novels">
-      <span>Novels</span>
-    </a>
+    <nav class="top-nav">
 
-    <a href="../index.html" class="nav-item">
-      <img src="icons/home.svg" alt="Home">
-      <span>Home</span>
-    </a>
-  </nav>
-</header>
+      <a href="../index.html" class="nav-item">
+        <ion-icon name="home"></ion-icon>
+        <span>Home</span>
+      </a>
 
-    <!-- ===== LOADING BAR ===== -->
-<div id="loadingBarContainer">
-  <div id="loadingBar"></div>
-</div>
+      <a href="../books/books.html" class="nav-item">
+        <ion-icon name="book-sharp"></ion-icon>
+        <span>Novels</span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- ===== LOADING BAR ===== -->
+  <div id="loadingBarContainer">
+    <div id="loadingBar"></div>
+  </div>
   <!-- ===== FILTERS ===== -->
   <section class="gallery-filters">
     <button class="filter-btn" data-filter="all">All</button>
     <button class="filter-btn" data-filter="newest">Newest</button>
     <button class="filter-btn" data-filter="oldest">Oldest</button>
   </section>
-<!-- ===== SEARCH BAR ===== -->
-    <section class="gallery-search">
+  <!-- ===== SEARCH BAR ===== -->
+  <section class="gallery-search">
     <input type="text" id="searchInput" placeholder="Search by tags or name..." />
-    </section>
+  </section>
+
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <!-- ===== ART GALLERY ===== -->
   <section class="gallery" id="fullGallery"></section>
   <script src="gallery.js"></script>
 
-</div>
-
-
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-      <p>© 2025 </p>
-
-  <!-- ===== PORTFOLIO & COPYRIGHT BANNER ===== -->
-  <div class="copyright-banner">
-    <p>This portfolio showcases my original artwork, stories, documents, and other content. All content is protected under copyright law. You may reference, share, or discuss my work in articles, blogs, or educational settings <strong>with proper credit</strong> and a link back to this site. Unauthorized commercial use, redistribution, or modification is not permitted without my consent.</p>
   </div>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <p>© 2025 </p>
+
+    <!-- ===== PORTFOLIO & COPYRIGHT BANNER ===== -->
+    <div class="copyright-banner">
+      <p>This portfolio showcases my original artwork, stories, documents, and other content. All content is protected
+        under copyright law. You may reference, share, or discuss my work in articles, blogs, or educational settings
+        <strong>with proper credit</strong> and a link back to this site. Unauthorized commercial use, redistribution,
+        or modification is not permitted without my consent.
+      </p>
+    </div>
 
 
 
 </body>
+
 </html>

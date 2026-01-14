@@ -1,20 +1,27 @@
-:root {
-  --bg: #0a0f1a;
-  --panel: #12182a;
-  --panel-strong: #0e1424;
-  --panel-alt: #1a2236;
-  --border: #1f2a44;
-  --text: #e6ebff;
-  --text-strong: #ffffff;
-  --muted: #8a94b8;
-  --accent: #5c7cff;
-  --accent-soft: rgba(92, 124, 255, 0.15);
-  --icon: var(--text);
-  --icon-muted: var(--muted);
-  --ripple: rgba(255, 255, 255, 0.45);
-  --button-bg: #151529;
-  --button-hover: #26262e;
+
+:root { 
+  /* Backgrounds */
+  --bg: #0b0b0d;             /* deep almost-black background */
+  --panel: #15151a;          /* dark panel for cards and sections */
+  --panel-strong: #1f1f25;   /* slightly stronger for modals/buttons */
+  --button-bg: #1a1a22;      /* dark button background */
+  --button-hover: #252530;   /* hover state for buttons */
+  --border: #2c2c36;         /* subtle border for separation */
+
+  /* Text */
+  --text: #e6e6e6;           /* light text for readability */
+  --text-strong: #ffffff;    /* stronger for titles/headings */
+  --muted: #7a7a8c;          /* muted secondary info */
+
+  /* Accent / interactive elements */
+  --accent: #3f51b5;         /* cooler, muted blue for links/buttons */
+  --accent-soft: rgba(63, 81, 181, 0.15); /* soft accent background */
+  --icon: #e6e6e6;            /* icons same as text */
+  --icon-muted: #7a7a8c;      /* muted icons */
+  --ripple: rgba(255, 255, 255, 0.25); /* even subtler ripple */
 }
+
+
 
 
 * {
@@ -77,6 +84,18 @@ body {
 .nav-item:hover img {
   opacity: 1;
 }
+
+.nav-item ion-icon {
+  font-size: 20px;   /* adjust size as needed */
+  color: var(--icon);
+  margin-bottom: 4px;
+  transition: color 0.25s ease;
+}
+
+.nav-item:hover ion-icon {
+  color: var(--accent);
+}
+
 
 /* ========== HERO ========== */
 .hero {
